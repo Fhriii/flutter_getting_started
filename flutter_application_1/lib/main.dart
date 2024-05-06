@@ -17,51 +17,14 @@ class myApp extends StatelessWidget{
           ),
           
           ),
-          body: ListView(
-            children: [
-              ListTile(
-                title: Text("Muh Fachri"),
-                subtitle: Text("Its Okay",
-                  overflow: TextOverflow.ellipsis,
-                ),
-                leading: CircleAvatar(),
-                
-                trailing: Text("10.00 PM"),
-                contentPadding: EdgeInsets.all(10),
-                
-              ),
-              Divider(
-                color: Colors.black,
-              ),
-              ListTile(
-                title: Text("Muh Fachri"),
-                subtitle: Text("Its Okay"),
-                leading: CircleAvatar(),
-                contentPadding: EdgeInsets.all(10),
-                trailing: Text("10.00 PM"),
-              ),
-              Divider(
-                color: Colors.black,
-              ),
-              ListTile(
-                title: Text("Muh Fachri"),
-                subtitle: Text("Its Okay"),
-                leading: CircleAvatar(),
-                trailing: Text("10.00 PM"),
-              ),
-              Divider(
-                color: Colors.black,
-              ),
-              ListTile(
-                title: Text("Muh Fachri"),
-                subtitle: Text("Its Okay"),
-                leading: CircleAvatar(),
-                trailing: Text("10.00 PM"),
-              ),
-              Divider(
-                color: Colors.black,
-              ),
-            ],
+          body: Center(
+            child: Container(
+              width: 300,
+              height: 300,
+              color: Colors.blue,
+
+              child: Image(image: AssetImage("images/download.jpeg"),),
+            ),
           ),
         ),
     );
