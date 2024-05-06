@@ -1,37 +1,69 @@
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(MyFirstApp());
+  runApp(myApp());
 }
-class MyFirstApp extends StatelessWidget{
-  List<Color> mycolor = [Colors.red,Colors.blue,Colors.yellow,Colors.black];
-  List<Widget> num=List.generate(90, (index) => Text(index.toString(),
-    style: TextStyle(
-      color: Colors.red,
-      fontSize: 10 +double.parse(index.toString())),
-  ));
 
-
+class myApp extends StatelessWidget{
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
           title: Center(
-            child: Text("My  App"))
-        ,),
-
-        body:ListView(
-          children: num,
+            child: Text("My App"),
+          ),
           
           ),
-        
-    ),
-
+          body: ListView(
+            children: [
+              ListTile(
+                title: Text("Muh Fachri"),
+                subtitle: Text("Its Okay",
+                  overflow: TextOverflow.ellipsis,
+                ),
+                leading: CircleAvatar(),
+                
+                trailing: Text("10.00 PM"),
+                contentPadding: EdgeInsets.all(10),
+                
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                title: Text("Muh Fachri"),
+                subtitle: Text("Its Okay"),
+                leading: CircleAvatar(),
+                contentPadding: EdgeInsets.all(10),
+                trailing: Text("10.00 PM"),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                title: Text("Muh Fachri"),
+                subtitle: Text("Its Okay"),
+                leading: CircleAvatar(),
+                trailing: Text("10.00 PM"),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                title: Text("Muh Fachri"),
+                subtitle: Text("Its Okay"),
+                leading: CircleAvatar(),
+                trailing: Text("10.00 PM"),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+            ],
+          ),
+        ),
     );
-    
   }
-  
 }
